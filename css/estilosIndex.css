@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.contenedor{
+    width: 100%;
+}
+
+/*==============
+INICIO DEL HEADER
+================*/
+
+header{
+    width: 100%;
+    overflow: hidden;
+    background: #252932;
+    margin-bottom: 20px;
+}
+
+.wrapper{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header .logo{
+
+    color: #f2f2f2;
+    font-size: 50px;
+    line-height: 200px;
+    float: left;
+}
+
+header nav{
+
+    float: right;
+    line-height: 200px;
+}
+
+header nav a{
+
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 500ms ease;
+}
+
+header nav a:hover{
+
+    background: #f56f3a;
+    border-radius: 50px;
+}
+
+/*==============
+FIN DEL HEADER
+================*/
+
+/*==============
+INICIO DEL SLIDER
+================*/
+
+.slider{
+    width: 95%;
+    margin: auto;
+    overflow: hidden; /*PARA QUE LOS ELEMENTOS QUE ESTAN AFUERA NO SE ROMPA */
+}
+
+
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 200%; /*DEPENDE EL NUMERO DE IMAGENES +100*/
+    animation: cambio 20s infinite;
+    animation-direction: alternate;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+}
+
+@keyframes cambio{
+
+    0% { margin-left: 0; }
+    20% {margin-left: 0;}
+
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+
+   /* 50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+
+    75% { margin-left: -200%;}
+    100% { margin-left: -200%;}*/
+}
+
+/*==============
+FIN DEL SLIDER
+================*/
