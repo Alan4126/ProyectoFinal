@@ -31,14 +31,14 @@ header .logo{
 
     color: #f2f2f2;
     font-size: 50px;
-    line-height: 200px;
+    line-height: 100px;
     float: left;
 }
 
 header nav{
 
     float: right;
-    line-height: 200px;
+    line-height: 100px;
 }
 
 header nav a{
@@ -68,7 +68,7 @@ INICIO DEL SLIDER
 ================*/
 
 .slider{
-    width: 95%;
+    width: 50%;
     margin: auto;
     overflow: hidden; /*PARA QUE LOS ELEMENTOS QUE ESTAN AFUERA NO SE ROMPA */
 }
@@ -109,3 +109,30 @@ INICIO DEL SLIDER
 /*==============
 FIN DEL SLIDER
 ================*/
+
+/*==============
+INICIO DE LA CAJA DE PELICULAS
+================*/
+
+.box-movies{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.movies-img{
+    width: 25%;
+    margin: auto;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+
+#img{
+    width: 180px;
+    height: 260px;
+
+}
+
+
