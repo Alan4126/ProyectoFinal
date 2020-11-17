@@ -21,10 +21,17 @@ header{
 }
 
 .wrapper{
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 50%;
+}
+
+.nav{
+    width: 50%;
 }
 
 header .logo{
@@ -32,12 +39,13 @@ header .logo{
     color: #f2f2f2;
     font-size: 50px;
     line-height: 100px;
-    float: left;
+    text-align: center;
+    
 }
 
 header nav{
 
-    float: right;
+    
     line-height: 100px;
 }
 
@@ -71,6 +79,8 @@ INICIO DEL SLIDER
     width: 50%;
     margin: auto;
     overflow: hidden; /*PARA QUE LOS ELEMENTOS QUE ESTAN AFUERA NO SE ROMPA */
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 
@@ -118,7 +128,12 @@ INICIO DE LA CAJA DE PELICULAS
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 50px;
+    padding-top: 50px;background: #252932;
+}
+
+.box-movies a{
+    text-decoration: none;
+    color: black;
 }
 
 .movies-img{
@@ -129,6 +144,7 @@ INICIO DE LA CAJA DE PELICULAS
     padding-bottom: 30px;
     text-align: center;
     -webkit-transition: background-color 0.9s;
+    color: #fff;
 }
 
 

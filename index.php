@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/estilosIndex.css?v=0.0.4">  
+    <link rel="stylesheet" href="css/estilosIndex.css?v=0.0.6">  
 </head>
 <body>
     
@@ -20,10 +20,11 @@
                     Anzu
                 </div>
                 <nav>
-                    <a href="#">Inicio</a>
+                    <a href="index.php">Inicio</a>
                     <a href="#">Contacto</a>
                     <a href="login.php">Ingresar</a>
                     <a href="registrarse.php">Registrarse</a>
+                    
                 </nav>
             </div>
         </header>
@@ -61,21 +62,28 @@
 
 
         <div class="box-movies">
-                <div class="movies-img">
-                    <img src="img/pelicula1.jpg" alt="" id="img" title="Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu">
-                    <div class="capa">
-                        <h5>
-                            Kazuma Satou es un chico de preparatoria otaku y hikikomori 
-                            que no suele salir de casa, pero cuando lo hace, un fatídico (y ridículo)
-                            accidente acaba con su vida. En el otro mundo aparece una diosa ante él y 
-                            le propone comenzar de nuevo su vida en un mundo de magia y espada, pero las 
-                            condiciones son un tanto peculiares, así que acabará comenzando de cero como 
-                            aventurero y acompañado de una diosa. </h5>
+
+                <a href="pelicula_1.php">
+                    <div class="movies-img">
+                        
+                        <img src="img/pelicula1.jpg" alt="" id="img" title="Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu">
+                        
+                        
+                        <div class="capa">
+                            <h5>
+                                Kazuma Satou es un chico de preparatoria otaku y hikikomori 
+                                que no suele salir de casa, pero cuando lo hace, un fatídico (y ridículo)
+                                accidente acaba con su vida. En el otro mundo aparece una diosa ante él y 
+                                le propone comenzar de nuevo su vida en un mundo de magia y espada, pero las 
+                                condiciones son un tanto peculiares, así que acabará comenzando de cero como 
+                                aventurero y acompañado de una diosa. </h5>
+                        </div>
+                        <h3>
+                            Kono Subarashii Sekai
+                        </h3>
                     </div>
-                    <h3>
-                        Kono Subarashii Sekai
-                    </h3>
-                </div>
+                </a>
+                
                 <div class="movies-img">
                     <img src="img/pelicula2.jpg" alt="" id="img" title="Tenki no Ko">
                     <div class="capa">

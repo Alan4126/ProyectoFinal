@@ -1,0 +1,156 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.contenedor{
+    width: 100%;
+}
+
+/*==============
+INICIO DEL HEADER
+================*/
+
+header{
+    width: 100%;
+    overflow: hidden;
+    background: #252932;
+    margin-bottom: 20px;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 50%;
+}
+
+.nav{
+    width: 50%;
+}
+
+header .logo{
+
+    color: #f2f2f2;
+    font-size: 50px;
+    line-height: 100px;
+    text-align: center;
+    
+}
+
+header nav{
+
+    
+    line-height: 100px;
+}
+
+header nav a{
+
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 500ms ease;
+}
+
+header nav a:hover{
+
+    background: #f56f3a;
+    border-radius: 50px;
+}
+
+/*==============
+FIN DEL HEADER
+================*/
+
+/*==============
+INICIO DE LA INFORMACION DE LA PELICULA
+================*/
+
+.informacion{
+    width: 100%;
+}
+
+.informacion-titulo{
+    width: 100%;
+    font-size: 20px;
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.informacion-titulo h3{
+    padding-left: 50px;
+}
+
+.informacion-video{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.informacion-pelicula{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #252932;
+}
+
+.informacion-pelicula-imagen{
+    width: 50%;
+    text-align: center;
+    
+}
+.informacion-pelicula-info{
+    width: 50%;
+    color: #fff;
+}
+
+.informacion-pelicula-info p{
+    
+    color: #fff;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.informacion-pelicula-info p span{
+    
+    color: #fff;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.informacion-pelicula-info ul li{
+    
+    color: #fff;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.informacion-pelicula-info ul li span{
+    
+    color: #fff;
+    font-weight: normal;
+}
+
+
+
+#img{
+    width: 170px;
+    height: 250px;
+}
+
+
+/*==============
+FIN DE LA INFORMACION DE LA PELICULA
+================*/
