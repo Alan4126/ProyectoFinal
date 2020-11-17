@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/estilosIndex.css?v=0.0.7">  
+    <link rel="stylesheet" href="css/estilosIndex.css?v=0.0.8">  
 </head>
 <body>
     
@@ -87,7 +87,7 @@
                 
                 <div class="movies-img">
                     <img src="img/pelicula2.jpg" alt="" id="img" title="Tenki no Ko">
-                        <a href="pelicula_1.php">
+                        <a href="pelicula_2.php">
                             <div class="capa">
                                 <h5>
                                     La historia se en centra en el estudiante de preparatoria Hodaka, 
@@ -104,7 +104,7 @@
                 </div>
                 <div class="movies-img">
                     <img src="img/pelicula3.jpg" alt="" id="img" title="Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai">
-                    <a href="pelicula_1.php">
+                    <a href="pelicula_3.php">
                         <div class="capa">
                             <h5>
                                 En Fujisawa, donde los cielos son brillantes y los mares brillan, 
@@ -122,7 +122,7 @@
                 </div>
                 <div class="movies-img">
                     <img src="img/pelicula4.jpg" alt="" id="img" title="Youjo Senki Movie">
-                    <a href="pelicula_1.php">
+                    <a href="pelicula_4.php">
                         <div class="capa">
                             <h5>
                                 Año 1926. El Batallón Aéreo de Magos 203 del Ejército Imperial, comandado por 
@@ -140,7 +140,7 @@
                 </div>
                 <div class="movies-img">
                     <img src="img/pelicula5.jpg" alt="" id="img" title="Kimi no Suizou wo Tabetai">
-                    <a href="pelicula_1.php">
+                    <a href="pelicula_5.php">
                         <div class="capa">
                             <h5>
                                 Un protagonista anónimo encuentra un día un diario en un hospital que pertenece a su compañera 
@@ -155,7 +155,7 @@
                 </div>
                 <div class="movies-img">
                     <img src="img/pelicula6.jpg" alt="" id="img" title="Sword Art Online Movie: Ordinal Scale">
-                    <a href="pelicula_1.php">
+                    <a href="pelicula_6.php">
                         <div class="capa">
                             <h5>
                                 La película tiene lugar tras los hechos acontecidos en la segunda temporada animada.
@@ -172,7 +172,7 @@
                 </div>
                 <div class="movies-img">
                     <img src="img/pelicula7.jpg" alt="" id="img" title="One Piece Film: Gold">
-                    <a href="pelicula_1.php">
+                    <a href="pelicula_7.php">
                         <div class="capa">
                         <h5>
                             La película narra la aventura de los Mugiwara en Gran Tesoro,
@@ -190,7 +190,7 @@
                 </div>
                 <div class="movies-img">
                     <img src="img/pelicula8.jpg" alt="" id="img" title="Re:Zero kara Hajimeru Isekai Seikatsu - Memory Snow">
-                    <a href="pelicula_1.php">
+                    <a href="pelicula_8.php">
                         <div class="capa">
                             <h5>
                                 La historia del OVA tiene lugar después de que Subaru y sus amigos derrotan a los Wolgarm,
