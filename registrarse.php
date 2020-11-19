@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" href="css/estilosRegistro.css?v=0.0.4">
+    <link rel="stylesheet" href="css/estilosRegistro.css?v=0.0.5">
     
 </head>
 <body>
@@ -17,17 +17,24 @@
         <h1>
             Registrate
         </h1>
-        <form>
-            <label for="Usuario">Usuario</label>
-            <input type="text" placeholder="Coloca Tu Usuario">
+        <form action="conexion1.php" method="POST">
+
+            <label for="Usuario">Nombre</label>
+            <input type="text" placeholder="Coloca Tu Nombre" name="nombre">
+
+            <label for="Apellido">Apellidos</label>
+            <input type="text" placeholder="Coloca Tus Apellidos" name="apellidos">
+
+            <label for="Email">Email</label>
+            <input type="text" placeholder="Coloca Tus Apellidos" name="email">
 
             <label for="Contraseña">Contraseña</label>
-            <input type="password" placeholder="Coloca Tu Contraseña">
+            <input type="password" placeholder="Coloca Tu Contraseña" name="clave">
 
             <input type="submit" value="Registrarse">
 
-            <a href="#">Olvidaste tu contraseña?</a> <br>
-            <a href="login.php">Iniciar Sesión</a>
+           
+            <a href="index.php">Iniciar Sesión</a>
 
         </form>
     

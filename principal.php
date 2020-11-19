@@ -23,8 +23,8 @@
                 <nav>
                     <a href="principal.php">Inicio</a>
                     <a href="#">Contacto</a>
-                    <a href="index.php">Cerrar Sesión</a>
-                    <a href="dashboard.php">das</a>
+                    <a href="salir.php">Cerrar Sesión</a>
+                    <a href="dashboard.php">Dashboard</a>
                     
                 </nav>
             </div>

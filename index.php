@@ -17,7 +17,7 @@
         <h1>
             Ingresa
         </h1>
-        <form action="conexion.php" method="POST">
+        <form action="ingresar.php" method="POST">
 
             <label for="Usuario">Email</label>
             <input type="text" placeholder="Coloca Tu Email" name="email">
@@ -28,7 +28,7 @@
             
             <input type="submit" value="Ingresar" >
 
-            <a href="principal.php">Olvidaste tu contraseña?</a> <br>
+           
             <a href="registrarse.php">No tienes una cuenta?</a>
 
         </form>
