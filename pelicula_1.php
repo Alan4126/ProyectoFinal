@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu</title>
-    <link rel="stylesheet" href="css/estilosPeliculas.css?v=0.0.5">
+    <link rel="stylesheet" href="css/estilosPeliculas.css?v=0.0.7">
 </head>
 <body>
 
@@ -16,10 +16,10 @@
         <header>
             <div class="wrapper">
                 <div class="logo">
-                    <a href="index.php">Anzu</a>
+                    <a href="principal.php">Anzu</a>
                 </div>
                 <nav class="nav">
-                    <a href="index.php">Inicio</a>
+                    <a href="principal.php">Inicio</a>
                     <a href="#">Contacto</a>
                     <a href="login.php">Ingresar</a>
                     <a href="registrarse.php">Registrarse</a>

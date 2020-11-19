@@ -3,6 +3,7 @@ body{
     padding: 0;
     font-family: sans-serif;
     height: 100vh;
+    
 }
 
 .contenedor{
@@ -17,7 +18,8 @@ header{
     width: 100%;
     overflow: hidden;
     background: #252932;
-    margin-bottom: 20px;
+   /* margin-bottom: 20px;*/
+  
 }
 
 .wrapper{
@@ -81,20 +83,22 @@ INICIO DEL SLIDER
 ================*/
 
 .slider{
-    width: 50%;
+    width: 100%;
     margin: auto;
     overflow: hidden; /*PARA QUE LOS ELEMENTOS QUE ESTAN AFUERA NO SE ROMPA */
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /*padding-top: 50px;
+    padding-bottom: 50px;*/
 }
 
 
 .slider ul{
+    
     display: flex;
     padding: 0;
-    width: 200%; /*DEPENDE EL NUMERO DE IMAGENES +100*/
-    animation: cambio 20s infinite;
+    width: 400%; /*DEPENDE EL NUMERO DE IMAGENES +100*/
+    animation: cambio 10s infinite;
     animation-direction: alternate;
+
 }
 
 .slider li{
@@ -104,6 +108,7 @@ INICIO DEL SLIDER
 
 .slider img{
     width: 100%;
+    height: 400px;
 }
 
 @keyframes cambio{
@@ -114,11 +119,11 @@ INICIO DEL SLIDER
     25% { margin-left: -100%;}
     45% { margin-left: -100%;}
 
-   /* 50% { margin-left: -200%;}
+    50% { margin-left: -200%;}
     70% { margin-left: -200%;}
 
-    75% { margin-left: -200%;}
-    100% { margin-left: -200%;}*/
+    75% { margin-left: -300%;}
+    100% { margin-left: -300%;}
 }
 
 /*==============
@@ -133,7 +138,8 @@ INICIO DE LA CAJA DE PELICULAS
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 50px;background: #252932;
+    padding-top: 10px;
+    background: #454a57;
 }
 
 .box-movies a{
@@ -184,6 +190,60 @@ INICIO DE LA CAJA DE PELICULAS
     
 }
 
+/*==============
+FIN DE LA CAJA DE PELICULAS
+================*/
 
+/*==============
+INICIO DEL FOOTER
+================*/
+
+footer{
+    width: 100%;
+    overflow: hidden;
+    background: #252932;
+   /* margin-bottom: 20px;*/
+  
+}
+
+footer .logo{
+
+    color: #f2f2f2;
+    font-size: 15px;
+    line-height: 100px;
+    text-align: center;
+    
+}
+
+footer nav{
+    width: 50%;
+   
+    line-height: 110px;
+}
+
+
+
+footer nav a{
+
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 500ms ease;
+}
+
+footer nav a:hover{
+
+    background: #f56f3a;
+    border-radius: 50px;
+}
+
+
+/*==============
+FIN DEL FOOTER
+================*/
 
 
