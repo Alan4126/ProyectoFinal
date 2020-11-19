@@ -17,7 +17,7 @@
         <h1>
             Registrate
         </h1>
-        <form action="conexion1.php" method="POST">
+        <form action="insertar.php" method="POST">
 
             <label for="Usuario">Nombre</label>
             <input type="text" placeholder="Coloca Tu Nombre" name="nombre">
