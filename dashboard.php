@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anzu </title>
-    <link rel="stylesheet" href="css/estilosIndex.css?v=0.0.8">
-    <link rel="stylesheet" href="css/estilosDash.css?v=0.0.8">    
+    <link rel="stylesheet" href="css/estilosIndex.css?v=0.0.9">
+    <link rel="stylesheet" href="css/estilosDash.css?v=0.0.9">    
 </head>
 <body>
     
@@ -26,6 +26,7 @@
                     <a href="#">Movies</a>
                     <a href="#">Clients</a>
                     <a href="#">Loads</a>
+                    <a href="index.php">Index</a>
                     
                 </nav>
             </div>
@@ -118,10 +119,10 @@
                 </div>
 
                 <div class="dashFlexHijo">
-                    <a href="#">
+                    <a href="categories/index.php">
                         <div class="hijo">
                             <p>
-                                index
+                                Category
                             </p>
                         </div>
                     </a>
