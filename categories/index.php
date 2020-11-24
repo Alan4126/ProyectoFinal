@@ -16,12 +16,11 @@ $categories = $categoryController -> get();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
+    <link rel="stylesheet" href="../css/estilosdatosMovies.css?v=0.0.11">
+    <link rel="stylesheet" href="../css/estilosIndex.css?v=0.0.9">
 
     <style type="text/css">
-        table, th,td{
-            border: 1px solid black;
-            
-        }
+        
         #updateForm{
             display: none;
         }
@@ -30,165 +29,204 @@ $categories = $categoryController -> get();
 </head>
 <body>
 
-    <div>
-        <h1>
-            Categorias
-        </h1>
-
-        <?php 
-
-		if (isset($_SESSION) && isset($_SESSION['error'])) {
-
-			echo "<h3> Error: ".$_SESSION['error']."</h3>";
-			unset($_SESSION['error']);
-
-		}
-
-        ?> 
-        
-        <?php if (isset($_SESSION) && isset($_SESSION['error']) ): ?>
-		<h3>
-			Error: <?= $_SESSION['error'] ?>
-		</h3>
-		<?php unset($_SESSION['error']); ?>
-		<?php endif ?>
-
-		<?php if (isset($_SESSION) && isset($_SESSION['success']) ): ?>
-		<h3>
-			Correcto: <?= $_SESSION['success'] ?>
-		</h3>
-		<?php unset($_SESSION['success']); ?>
-		<?php endif ?>
-
-        <table>
-            <thead>
-                <th>
-                    #
-                </th>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Description
-                </th>
-                <th>
-                    Actions
-                </th>
-              
-            </thead> 
-            <tbody>
-                
-				<?php foreach ($categories as $category): ?>
-
-                <tr>
+    
+    <div class="contenedor">
+         <!--===============================
+            INICIO DEL HEADER DE LA PAGINA
+        ===================================-->
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="#">Anzu Dashboard</a>
                     
-                    <td>
-                        <?= $category['id'] ?>
-                    </td>
-                    <td>
-                        <?= $category['name'] ?>
-                    </td>
-                    <td>
-                        <?= $category['description'] ?>
-                    </td>
-                    <td>
-                    <button onclick="edit(<?= $category['id'] ?>,'<?= $category['name'] ?>','<?= $category['description'] ?>','<?= $category['status'] ?>')">
-                            Edit category
-                    </button>
-                    <button onclick="remove(<?= $category['id'] ?>)" style="color: white; background: red;">
-                        Delete category
-                    </button>
-                    </td>
+                </div>
+                <nav>
+                    <a href="#">Inicio</a>
+                    <a href="#">Movies</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Loads</a>
+                    <a href="../index.php">Index</a>
+                    
+                </nav>
+            </div>
+        </header>
+        <!--===============================
+            FIN DEL HEADER DE LA PAGINA
+        ===================================-->
 
-                </tr>
-        
-                <?php endforeach ?>
+        <!--===============================
+            Contenedor tabla
+        ===================================-->
 
-                <?php 
+        <div class="contenedortabla">
+            <h1>
+                Categorias
+            </h1>
 
-                ?> 
+            <?php 
 
+            if (isset($_SESSION) && isset($_SESSION['error'])) {
+
+                echo "<h3> Error: ".$_SESSION['error']."</h3>";
+                unset($_SESSION['error']);
+
+            }
+
+            ?> 
+            
+            <?php if (isset($_SESSION) && isset($_SESSION['error']) ): ?>
+            <h3>
+                Error: <?= $_SESSION['error'] ?>
+            </h3>
+            <?php unset($_SESSION['error']); ?>
+            <?php endif ?>
+
+            <?php if (isset($_SESSION) && isset($_SESSION['success']) ): ?>
+            <h3>
+                Correcto: <?= $_SESSION['success'] ?>
+            </h3>
+            <?php unset($_SESSION['success']); ?>
+            <?php endif ?>
+
+            <table>
+                <thead>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Actions
+                    </th>
                 
-            </tbody>
-        </table>
+                </thead> 
+                <tbody>
+                    
+                    <?php foreach ($categories as $category): ?>
 
-        <form id="storeForm" action="../app/categoryController.php" method="POST">
-            <fieldset>
-                <legend>
-                    Add new category
-                </legend>
+                    <tr>
+                        
+                        <td class="centrar">
+                            <?= $category['id'] ?>
+                        </td>
+                        <td class="centrar">
+                            <?= $category['name'] ?>
+                        </td>
+                        <td class="centrar">
+                            <?= $category['description'] ?>
+                        </td>
+                        <td class="centrar">
+                        <button onclick="edit(<?= $category['id'] ?>,'<?= $category['name'] ?>','<?= $category['description'] ?>','<?= $category['status'] ?>')">
+                                Edit category
+                        </button>
+                        <button onclick="remove(<?= $category['id'] ?>)" style="color: white; background: red;">
+                            Delete category
+                        </button>
+                        </td>
 
-                <label for="">
-                    name
-                </label>
+                    </tr>
+            
+                    <?php endforeach ?>
 
-                <input type="text" name="name" placeholder="terror"> <br>
+                    <?php 
 
-                <label for="">
-                    Description
-                </label><br>
+                    ?> 
 
-                <textarea name="description"  cols="30" rows="5" placeholder="write here"></textarea><br>
+                    
+                </tbody>
+            </table>
+
+            <h1>
+                Agregar / Modificar
+            </h1>
+
+            <form id="storeForm" action="../app/categoryController.php" method="POST">
+                <fieldset class="fielset">
+                    <legend>
+                        Add new category
+                    </legend>
+
+                    <label for="">
+                        Name
+                    </label> <br><br>
+
+                    <input type="text" name="name" placeholder="terror"> <br>
+
+                    <label for="">
+                        Description
+                    </label><br><br>
+
+                    <textarea name="description"  cols="30" rows="5" placeholder="write here"></textarea><br><br>
 
 
-                <label for="">
-                    Status
-                </label>
+                    <label for="">
+                        Status
+                    </label><br><br>
 
-                <select name="status">
-                    <option>Active</option>
-                    <option>inactive</option>
-                </select><br>
+                    <select name="status">
+                        <option>Active</option>
+                        <option>inactive</option>
+                    </select><br><br>
 
-                <button type="submit">SAVE</button>
-                <input type="hidden" name="action" value="store">
+                    <button type="submit">SAVE</button>
+                    <input type="hidden" name="action" value="store">
 
-            </fieldset>
-        </form>
+                </fieldset>
+            </form>
+            
+
+            <form id="updateForm" action="../app/categoryController.php" method="POST">
+                <fieldset class="fielset">
+                    <legend>
+                        Edit category
+                    </legend>
+
+                    <label for="">
+                        Name
+                    </label><br><br>
+
+                    <input type="text" id="name" name="name" placeholder="terror"> <br>
+
+                    <label for="">
+                        Description
+                    </label><br><br>
+
+                    <textarea name="description" id="description" cols="30" rows="5" placeholder="write here"></textarea><br><br>
+
+                    <label for="">
+                        Status
+                    </label><br><br>
+
+                    <select id="status" name="status">
+                        <option>Active</option>
+                        <option>inactive</option>
+                    </select><br><br>
+
+                    <button type="submit">SAVE</button>
+                    <input type="hidden" name="action" value="update">
+                    <input type="hidden" name="id" id="id">
+                </fieldset>
+            </form>
+
+
+            <form id="destroyForm" action="../app/categoryController.php" method="POST">
+
+
+                <input type="hidden" name="action" value="destroy">
+                <input type="hidden" name="id" id="id_destroy">
+
+            </form>
+        </div>
+
+
+    </div>
         
 
-        <form id="updateForm" action="../app/categoryController.php" method="POST">
-            <fieldset>
-                <legend>
-                    Edit category
-                </legend>
-
-                <label for="">
-                    name
-                </label>
-
-                <input type="text" id="name" name="name" placeholder="terror"> <br>
-
-                <label for="">
-                    Description
-                </label><br>
-
-                <textarea name="description" id="description" cols="30" rows="5" placeholder="write here"></textarea><br>
-
-                <label for="">
-                    Status
-                </label>
-
-                <select id="status" name="status">
-                    <option>Active</option>
-                    <option>inactive</option>
-                </select><br>
-
-                <button type="submit">SAVE</button>
-                <input type="hidden" name="action" value="update">
-                <input type="hidden" name="id" id="id">
-            </fieldset>
-        </form>
-
-
-        <form id="destroyForm" action="../app/categoryController.php" method="POST">
-
-
-            <input type="hidden" name="action" value="destroy">
-            <input type="hidden" name="id" id="id_destroy">
-
-        </form>
-    </div>
+    
 
     <script type="text/javascript">
 

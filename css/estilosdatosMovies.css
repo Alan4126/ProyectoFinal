@@ -11,6 +11,11 @@
 
 th ,td {
     padding: 20px;
+    
+}
+
+.centrar{
+    text-align: center;
 }
 
 .concolor{
@@ -23,9 +28,11 @@ thead{
    
 }
 
-h2{
-    padding-left: 50px;
-    font-size: 35px;
+h1{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
 }
 
 .clienteagre{
@@ -51,4 +58,13 @@ input[type="password"]{
 
 .clienteagre a{
     text-decoration: none;
+}
+
+
+.fielset{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
 }
