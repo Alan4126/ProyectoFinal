@@ -11,7 +11,6 @@ if(isset($_POST['action'])){
     $categoryController = new CategoryController();
 
     switch($_POST['action']){
-
         case 'store':
             $name = strip_tags($_POST['name']);
             $description = strip_tags($_POST['description']);

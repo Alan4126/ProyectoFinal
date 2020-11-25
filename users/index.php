@@ -145,19 +145,7 @@
 			
 			?>
 
-			<?php if (isset($_SESSION) && isset($_SESSION['error']) ): ?>
-			<h3>
-				Error: <?= $_SESSION['error'] ?>
-			</h3>
-			<?php unset($_SESSION['error']); ?>
-			<?php endif ?>
-
-			<?php if (isset($_SESSION) && isset($_SESSION['success']) ): ?>
-			<h3>
-				Correcto: <?= $_SESSION['success'] ?>
-			</h3>
-			<?php unset($_SESSION['success']); ?>
-			<?php endif ?>
+			<?php include "../layouts/alerts.template.php"; ?>			
 			
 			<form id="storeForm" action="../app/usersController.php" method="POST">
 				<fieldset class="fielset">
