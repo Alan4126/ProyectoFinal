@@ -96,7 +96,7 @@
 
                 <div class="dashFlexHijo">
 
-                    <a href="#">
+                    <a href="users/index.php">
                         <div class="hijo">
                             <p>
                                 Clients

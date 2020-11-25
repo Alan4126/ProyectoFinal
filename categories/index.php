@@ -16,7 +16,7 @@ $categories = $categoryController -> get();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
-    <link rel="stylesheet" href="../css/estilosdatosMovies.css?v=0.0.11">
+    <link rel="stylesheet" href="../css/estilosdatosMovies.css?v=0.0.12">
     <link rel="stylesheet" href="../css/estilosIndex.css?v=0.0.9">
 
     <style type="text/css">
@@ -222,7 +222,36 @@ $categories = $categoryController -> get();
             </form>
         </div>
 
-
+        <!--===============================
+            INICIO DEL FOOTER DE LA PAGINA
+        ===================================-->
+        <footer>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="index.php">© copyright by Jesus Alan Hernandez Rodarte </a>
+                    
+                </div>
+                <nav >
+                    <a href="#">
+                        <img src="../img/facebook.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="../img/twit.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="../img/instagram.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="../img/google.png" alt="">
+                    </a>
+                    
+                    
+                </nav>
+            </div>
+        </footer>
+        <!--===============================
+            FIN DEL FOOTER DE LA PAGINA
+        ===================================-->
     </div>
         
 
