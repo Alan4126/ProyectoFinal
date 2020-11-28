@@ -1,10 +1,32 @@
+<?php 
+
+include "app/movieController.php";
+
+$movieController = new MovieController();
+
+$titles =  $movieController->getTitle($_GET['id']);
+$trailers =  $movieController->getTrailer($_GET['id']);
+$descriptions =  $movieController->getDescriptio($_GET['id']);
+$covers =  $movieController->getCover($_GET['id']);
+$clasifications =  $movieController->getClasifica($_GET['id']);
+$minutes =  $movieController->getMinutes($_GET['id']);
+$categorys =  $movieController->getCategory($_GET['id']);
+
+//$id = var_dump($_GET);
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu</title>
-    <link rel="stylesheet" href="css/estilosPeliculas.css?v=0.0.7">
+    <link rel="stylesheet" href="css/estilosPeliculas.css?v=0.0.8">
 </head>
 <body>
 
@@ -38,51 +60,90 @@
 
 
             <div class="informacion-titulo">
-                <h3>
-                    Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu
-                </h3>
+
+                <?php foreach ($titles as $title): ?>
+                    <h3>
+                    <?= $title['title'] ?>    
+                    </h3>
+                <?php endforeach ?>
+                
             </div>
 
             <div class="informacion-video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/5h4rQY9bpgE" 
+
+                <?php foreach ($trailers as $trailer): ?>
+                    
+                    <iframe width="560" height="315" src="<?= $trailer['trailer'] ?>" 
                     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
-                </iframe>
+                    </iframe>
+
+                <?php endforeach ?>
+                
             </div>
 
             <div class="informacion-pelicula">
+
                     <div class="informacion-pelicula-imagen">
-                        <img src="img/pelicula1.jpg" alt="" id="img" title="Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu">
+                        <?php foreach ($covers as $cover): ?>
+                            <img src="assets/img/movies/<?= $cover['cover'] ?>" alt="" id="img">
+                        <?php endforeach ?>
                     </div>
+
                     <div class="informacion-pelicula-info">
                         
                         <p>
-                            Descripción: 
-                            <span>
-                                Kazuma Satou es un chico de preparatoria otaku y hikikomori 
-                                que no suele salir de casa, pero cuando lo hace, un fatídico (y ridículo)
-                                accidente acaba con su vida. En el otro mundo aparece una diosa ante él y 
-                                le propone comenzar de nuevo su vida en un mundo de magia y espada, pero las 
-                                condiciones son un tanto peculiares, así que acabará comenzando de cero como 
-                                aventurero y acompañado de una diosa.
-                            </span>
+                            Descripción:
+                            <?php foreach ($descriptions as $description): ?> 
+                                
+                                    <?= $description['description'] ?>
+                                
+                            <?php endforeach ?>
                         </p>    
 
                         <ul>
                             <li>
-                                Nombre: <span>Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu</span>
+                                Nombre: 
+                                <span>
+                                <?php foreach ($titles as $title): ?>
+                                    
+                                    <?= $title['title'] ?>    
+                                    
+                                <?php endforeach ?>
+                                </span>
                             </li>
                             <li>
-                                Clasificación:  <span>Anime</span>
+                                Clasificación:  
+                                    <span>
+                                        <?php foreach ($clasifications as $clasification): ?>
+                                            
+                                            <?= $clasification['clasification'] ?>    
+                                           
+                                        <?php endforeach ?>
+                                    </span>
                             </li>
                             <li>
-                                Minutos: <span>1 hr 30 m</span>
+                                Minutos: 
+                                <span>
+                                    <?php foreach ($minutes as $minute): ?>
+                                        
+                                        <?= $minute['minutes'] ?>    
+                                        
+                                    <?php endforeach ?>
+                                </span>
                             </li>
                             <li>
                                 Año: <span>2019</span>
                             </li>
                             <li>
-                                Categoria: <span>Anime</span>
+                                Categoria: 
+                                    <span>
+                                        <?php foreach ($categorys as $category): ?>
+                                            
+                                            <?= $category['category_id'] ?>    
+                                            
+                                        <?php endforeach ?>
+                                    </span>
                             </li>
                             <li>
                                 Visualizaciones: <span>10 398</span>
