@@ -204,7 +204,7 @@ class MovieController
 		$conn = connect();
 		
 		if($conn->connect_error==false){
-			$query="select category_id from movies where id = '$id'";
+			$query="select name from categories where id = '$id'";
 			$prepared_query = $conn->prepare($query);
 			$prepared_query->execute();
 

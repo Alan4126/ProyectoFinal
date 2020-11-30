@@ -14,23 +14,21 @@ if(isset($_POST['action'])){
 
         case 'store':
             $name = strip_tags($_POST['name']);
-            $lastname = strip_tags($_POST['lastname']);
+           
 			$email = strip_tags($_POST['email']);
 			$password = strip_tags($_POST['password']);
-			$rol = strip_tags($_POST['rol']);
+			
 			
 
-            $usersController->store($name,$lastname,$email,$password,$rol);
+            $usersController->store($name,$email,$password);
         break;
         case 'update':
             $name = strip_tags($_POST['name']);
-            $lastname = strip_tags($_POST['lastname']);
 			$email = strip_tags($_POST['email']);
 			$password = strip_tags($_POST['password']);
-			$rol = strip_tags($_POST['rol']);
             $id = strip_tags($_POST['id']);
 
-            $usersController->update($id,$name,$lastname,$email,$password,$rol);
+            $usersController->update($id,$name,$email,$password);
         break;
         case 'destroy':
 
@@ -75,18 +73,18 @@ class UsersController
 
 	}
 
-	public function store($name,$lastname,$email,$password,$rol){
+	public function store($name,$email,$password){
 
 		$conn = connect();
 
         if($conn->connect_error==false){
 
-            if($name!="" && $lastname!="" && $email!="" && $password!="" && $rol!=""){
+            if($name!="" && $email!="" && $password!=""){
 
-                $query="insert into users(name,lastname,email,password,rol) values(?,?,?,?,?)";
+                $query="insert into users(name,email,password) values(?,?,?)";
 
                 $prepared_query = $conn->prepare($query);
-                $prepared_query->bind_param('sssss',$name,$lastname,$email,$password,$rol);
+                $prepared_query->bind_param('sss',$name,$email,$password);
 
                 if($prepared_query->execute()){
                     header("location:".$_SERVER['HTTP_REFERER']);
@@ -111,18 +109,18 @@ class UsersController
     }
     
 
-    public function update($id,$name,$lastname,$email,$password,$rol)
+    public function update($id,$name,$email,$password)
     {
         $conn = connect();
 
         if($conn->connect_error==false){
 
-            if($id != "" && $name!="" && $lastname != "" && $email != "" && $password != "" && $rol != ""){
+            if($id != "" && $name!=""  && $email != "" && $password != ""){
 
-                $query="update users set name = ?, lastname = ?, email = ?, password = ?, rol = ? where id = ?";
+                $query="update users set name = ?, email = ?, password = ? where id = ?";
 
                 $prepared_query = $conn->prepare($query);
-                $prepared_query->bind_param('sssssi',$name,$lastname,$email,$password,$rol,$id);
+                $prepared_query->bind_param('sssi',$name,$email,$password,$id);
 
                 if($prepared_query->execute()){
                     header("location:".$_SERVER['HTTP_REFERER']);

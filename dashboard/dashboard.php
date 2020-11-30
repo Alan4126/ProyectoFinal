@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anzu </title>
-    <link rel="stylesheet" href="css/estilosIndex.css?v=0.0.9">
-    <link rel="stylesheet" href="css/estilosDash.css?v=0.0.9">    
+    <link rel="stylesheet" href="../css/estilosIndex.css?v=0.0.9">
+    <link rel="stylesheet" href="../css/estilosDash.css?v=0.0.9">    
 </head>
 <body>
     
@@ -18,11 +18,11 @@
         <header>
             <div class="wrapper">
                 <div class="logo">
-                    <a href="dashboard.php">Anzu Dashboard</a>
+                    <a href="../dashboard/dashboard.php">Anzu Dashboard</a>
                     
                 </div>
                 <nav>
-                    <a href="dashboard.php">Inicio</a>
+                    <a href="../dashboard/dashboard.php">Inicio</a>
                     <a href="#">Movies</a>
                     <a href="#">Clients</a>
                     <a href="#">Loads</a>
@@ -44,16 +44,16 @@
             <ul>
                 
                 <li>
-                    <img src="img/miku.png" alt="">
+                    <img src="../img/miku.png" alt="">
                 </li>
                 <li>
-                    <img src="img/nino.png" alt="">
+                    <img src="../img/nino.png" alt="">
                 </li>
                 <li>
-                    <img src="img/ichi.png" alt="">
+                    <img src="../img/ichi.png" alt="">
                 </li>
                 <li>
-                    <img src="img/its.png" alt="">
+                    <img src="../img/its.png" alt="">
                 </li>
                
 
@@ -82,7 +82,7 @@
 
                 
                 <div class="dashFlexHijo">
-                    <a href="movies/index.php">
+                    <a href="../movies/index.php">
                         <div class="hijo">
                             <p>
                                 Movies
@@ -96,7 +96,7 @@
 
                 <div class="dashFlexHijo">
 
-                    <a href="users/index.php">
+                    <a href="../users/index.php">
                         <div class="hijo">
                             <p>
                                 Clients
@@ -119,7 +119,7 @@
                 </div>
 
                 <div class="dashFlexHijo">
-                    <a href="categories/index.php">
+                    <a href="../categories/index.php">
                         <div class="hijo">
                             <p>
                                 Category
@@ -164,16 +164,16 @@
                 </div>
                 <nav >
                     <a href="#">
-                        <img src="img/facebook.png" alt="">
+                        <img src="../img/facebook.png" alt="">
                     </a>
                     <a href="#">
-                        <img src="img/twit.png" alt="">
+                        <img src="../img/twit.png" alt="">
                     </a>
                     <a href="#">
-                        <img src="img/instagram.png" alt="">
+                        <img src="../img/instagram.png" alt="">
                     </a>
                     <a href="#">
-                        <img src="img/google.png" alt="">
+                        <img src="../img/google.png" alt="">
                     </a>
                     
                     

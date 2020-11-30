@@ -1,6 +1,6 @@
 <?php 
 
-include "app/movieController.php";
+include "../app/movieController.php";
 
 $movieController = new MovieController();
 
@@ -26,7 +26,8 @@ $categorys =  $movieController->getCategory($_GET['id']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu</title>
-    <link rel="stylesheet" href="css/estilosPeliculas.css?v=0.0.8">
+    <link rel="stylesheet" href="../css/estilosPeliculas.css?v=0.0.8">
+    
 </head>
 <body>
 
@@ -41,10 +42,9 @@ $categorys =  $movieController->getCategory($_GET['id']);
                     <a href="principal.php">Anzu</a>
                 </div>
                 <nav class="nav">
-                    <a href="principal.php">Inicio</a>
+                    <a href="../principal/principal.php">Inicio</a>
                     <a href="#">Contacto</a>
-                    <a href="login.php">Ingresar</a>
-                    <a href="registrarse.php">Registrarse</a>
+                    
                 </nav>
             </div>
         </header>
@@ -86,7 +86,7 @@ $categorys =  $movieController->getCategory($_GET['id']);
 
                     <div class="informacion-pelicula-imagen">
                         <?php foreach ($covers as $cover): ?>
-                            <img src="assets/img/movies/<?= $cover['cover'] ?>" alt="" id="img">
+                            <img src="../assets/img/movies/<?= $cover['cover'] ?>" alt="" id="img">
                         <?php endforeach ?>
                     </div>
 
@@ -140,7 +140,7 @@ $categorys =  $movieController->getCategory($_GET['id']);
                                     <span>
                                         <?php foreach ($categorys as $category): ?>
                                             
-                                            <?= $category['category_id'] ?>    
+                                            <?= $category['name'] ?>    
                                             
                                         <?php endforeach ?>
                                     </span>
@@ -160,6 +160,8 @@ $categorys =  $movieController->getCategory($_GET['id']);
 
 
         </div>
+
+        
     
     
     </div>

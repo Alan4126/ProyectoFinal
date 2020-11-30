@@ -59,6 +59,7 @@ body{
 }
 
 .login-caja input[type="text"],
+.login-caja input[type="email"],
 .login-caja input[type="password"]{
     
     border: none;
@@ -71,7 +72,7 @@ body{
 
 }
 
-.login-caja input[type="submit"]{
+.login-caja button[type="submit"]{
     
     border: none;
     outline: none;

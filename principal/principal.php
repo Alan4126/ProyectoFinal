@@ -1,6 +1,6 @@
 <?php 
 
-include "app/movieController.php";
+include "../app/movieController.php";
 
 $movieController = new MovieController();
 
@@ -16,7 +16,7 @@ $movies = $movieController->get();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anzu </title>
-    <link rel="stylesheet" href="css/estilosIndex.css?v=0.0.8">  
+    <link rel="stylesheet" href="../css/estilosIndex.css?v=0.0.8">  
 </head>
 <body>
     
@@ -33,10 +33,10 @@ $movies = $movieController->get();
                     
                 </div>
                 <nav>
-                    <a href="principal.php">Inicio</a>
+                    <a href="../principal/principal.php">Inicio</a>
                     <a href="#">Contacto</a>
-                    <a href="#">Algo</a>
-                    <a href="dashboard.php">Dashboard</a>
+                    
+                    <a href="../dashboard/dashboard.php">Dashboard</a>
                     
                 </nav>
             </div>
@@ -54,16 +54,16 @@ $movies = $movieController->get();
             <ul>
                 
                 <li>
-                    <img src="img/miku.png" alt="">
+                    <img src="../img/miku.png" alt="">
                 </li>
                 <li>
-                    <img src="img/nino.png" alt="">
+                    <img src="../img/nino.png" alt="">
                 </li>
                 <li>
-                    <img src="img/ichi.png" alt="">
+                    <img src="../img/ichi.png" alt="">
                 </li>
                 <li>
-                    <img src="img/its.png" alt="">
+                    <img src="../img/its.png" alt="">
                 </li>
                
 
@@ -87,8 +87,8 @@ $movies = $movieController->get();
 
             <?php foreach ($movies as $movie): ?>
                 <div class="movies-img">
-                <img src="assets/img/movies/<?= $movie['cover'] ?>" alt="" id="img">
-                <a href="pelicula_1.php?id=<?= $movie['id'] ?>">
+                <img src="../assets/img/movies/<?= $movie['cover'] ?>" alt="" id="img">
+                <a href="../plantilla/pelicula_1.php?id=<?= $movie['id'] ?>">
                     <div class="capa">
                         <h5>
                             <?= $movie['description'] ?>
@@ -118,16 +118,16 @@ $movies = $movieController->get();
                 </div>
                 <nav >
                     <a href="#">
-                        <img src="img/facebook.png" alt="">
+                        <img src="../img/facebook.png" alt="">
                     </a>
                     <a href="#">
-                        <img src="img/twit.png" alt="">
+                        <img src="../img/twit.png" alt="">
                     </a>
                     <a href="#">
-                        <img src="img/instagram.png" alt="">
+                        <img src="../img/instagram.png" alt="">
                     </a>
                     <a href="#">
-                        <img src="img/google.png" alt="">
+                        <img src="../img/google.png" alt="">
                     </a>
                     
                     

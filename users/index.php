@@ -71,16 +71,10 @@
 						name
 					</th>
 					<th>
-						lastname
-					</th>
-					<th>
 						email
 					</th>
 					<th>
 						password
-					</th>
-					<th>
-						rol
 					</th>
 					<th>
 						Action
@@ -97,25 +91,19 @@
 							<td class="centrar">
 								<?= $user['name'] ?>
 							</td>
-							<td class="centrar">
-								<?= $user['lastname'] ?>
-							</td>
 							<td class="centrar"> 
 								<?= $user['email'] ?>
 							</td>
 							<td class="centrar">
 								<?= $user['password'] ?>
 							</td>
-							<td class="centrar">
-								<?= $user['rol'] ?>
-							</td>
 							<td>
-							<button onclick="edit(<?= $user['id'] ?>,'<?= $user['name'] ?>','<?= $user['lastname'] ?>','<?= $user['email'] ?>','<?= $user['password'] ?>','<?= $user['rol'] ?>')">
-                                Edit 
-							</button>
-							<button onclick="remove(<?= $user['id'] ?>)" style="color: white; background: red;">
-                            	Delete 
-                        	</button>
+								<button onclick="edit(<?= $user['id'] ?>,'<?= $user['name'] ?>','<?= $user['email'] ?>','<?= $user['password'] ?>')">
+									Edit 
+								</button>
+								<button onclick="remove(<?= $user['id'] ?>)" style="color: white; background: red;">
+									Delete 
+								</button>
 							</td>
 							
 
@@ -159,10 +147,6 @@
 					</label><br><br>
 					<input type="text" name="name" placeholder="type" required=""> <br> <br>
 
-					<label>
-						lastname
-					</label><br><br>
-					<input type="text" name="lastname" placeholder="type" required=""> <br><br>
 					
 					<label>
 						email
@@ -174,10 +158,7 @@
 					</label><br><br>
 					<input type="text" name="password" placeholder="type" required=""> <br><br>
 
-					<label>
-						rol
-					</label><br><br>
-					<input type="text" name="rol" placeholder="type" required=""> <br><br>
+					
 
 					<button type="submit"> save User</button>
 					<input type="hidden" name="action" value="store">
@@ -198,10 +179,7 @@
 					</label><br><br>
 					<input type="text" id="name" name="name" placeholder="type" > <br> <br>
 
-					<label>
-						lastname
-					</label><br><br>
-					<input type="text" id="lastname" name="lastname" placeholder="type" > <br><br>
+					
 					
 					<label>
 						email
@@ -213,10 +191,7 @@
 					</label><br><br>
 					<input type="text" id="password" name="password" placeholder="type" > <br><br>
 
-					<label>
-						rol
-					</label><br><br>
-					<input type="text" id="rol" name="rol" placeholder="type" > <br><br>
+					
 
 					<button type="submit"> save User</button>
 					<input type="hidden" name="action" value="update">
@@ -270,16 +245,14 @@
 
 	<script type="text/javascript">
 
-	function edit(id,name,lastname,email,password,rol){
+	function edit(id,name,email,password){
 
 		document.getElementById('storeForm').style.display="none";
         document.getElementById('updateForm').style.display="block";
 
 		document.getElementById('name').value=name
-		document.getElementById('lastname').value=lastname
 		document.getElementById('email').value=email
 		document.getElementById('password').value=password
-		document.getElementById('rol').value=rol
 		document.getElementById('id').value=id
 
 	}

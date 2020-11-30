@@ -133,6 +133,7 @@ class CategoryController{
         
     }
     
+    
     public function destroy($id){
 
         $conn = connect();
