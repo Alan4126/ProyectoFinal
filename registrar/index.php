@@ -36,12 +36,12 @@ if(!isset($_SESSION)){
                 <label>
                     Email
                 </label>
-                <input type="text" name="email" placeholder="Coloca Tu Email" require="">
+                <input type="email" name="email" placeholder="Coloca Tu Email" require="">
 
                 <label>
                     Contraseña
                 </label>
-                <input type="text" name="password" placeholder="Coloca Tu Contraseña" require="">
+                <input type="password" name="password" placeholder="Coloca Tu Contraseña" require="">
 
                 <button type="submit">
                     Registrar

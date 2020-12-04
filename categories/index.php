@@ -43,11 +43,11 @@ if(isset($_SESSION)==false || isset($_SESSION['id'])==false){
                     
                 </div>
                 <nav>
-                    <a href="#">Inicio</a>
-                    <a href="#">Movies</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Loads</a>
-                    <a href="../index.php">Index</a>
+                    <a href="../dashboard/dashboard.php">Inicio</a>
+                    <a href="../movies">Movies</a>
+                    <a href="../users">Clients</a>
+                    <a href="../categories">Category</a>
+                    <a href="../app/salir.php">Salir</a>
                     
                 </nav>
             </div>

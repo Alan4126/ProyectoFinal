@@ -42,11 +42,11 @@
                     
                 </div>
                 <nav>
-                    <a href="#">Inicio</a>
-                    <a href="#">Movies</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Loads</a>
-                    <a href="../index.php">Index</a>
+					<a href="../dashboard/dashboard.php">Inicio</a>
+                    <a href="../movies">Movies</a>
+                    <a href="../users">Clients</a>
+                    <a href="../categories">Category</a>
+                    <a href="../app/salir.php">Salir</a>
                     
                 </nav>
             </div>
@@ -60,7 +60,7 @@
 
 		<div class="contenedortabla">
 			<h1>
-				Users 
+				Clients 
 			</h1>
 			<table>
 				<thead>
@@ -75,6 +75,9 @@
 					</th>
 					<th>
 						password
+					</th>
+					<th>
+						role
 					</th>
 					<th>
 						Action
@@ -97,8 +100,11 @@
 							<td class="centrar">
 								<?= $user['password'] ?>
 							</td>
+							<td class="centrar">
+								<?= $user['role'] ?>
+							</td>
 							<td>
-								<button onclick="edit(<?= $user['id'] ?>,'<?= $user['name'] ?>','<?= $user['email'] ?>','<?= $user['password'] ?>')">
+								<button onclick="edit(<?= $user['id'] ?>,'<?= $user['name'] ?>','<?= $user['email'] ?>','<?= $user['password'] ?>','<?= $user['role'] ?>')">
 									Edit 
 								</button>
 								<button onclick="remove(<?= $user['id'] ?>)" style="color: white; background: red;">
@@ -158,6 +164,11 @@
 					</label><br><br>
 					<input type="text" name="password" placeholder="type" required=""> <br><br>
 
+					<label>
+						role
+					</label><br><br>
+					<input type="text" name="role" placeholder="type" required=""> <br><br>
+
 					
 
 					<button type="submit"> save User</button>
@@ -190,6 +201,14 @@
 						password
 					</label><br><br>
 					<input type="text" id="password" name="password" placeholder="type" > <br><br>
+
+					<label>
+						role
+					</label><br><br>
+					<input type="text" id="role" name="role" placeholder="type" > <br><br>
+
+
+				
 
 					
 
@@ -245,7 +264,7 @@
 
 	<script type="text/javascript">
 
-	function edit(id,name,email,password){
+	function edit(id,name,email,password,role){
 
 		document.getElementById('storeForm').style.display="none";
         document.getElementById('updateForm').style.display="block";
@@ -253,6 +272,8 @@
 		document.getElementById('name').value=name
 		document.getElementById('email').value=email
 		document.getElementById('password').value=password
+		document.getElementById('role').value=role
+		
 		document.getElementById('id').value=id
 
 	}

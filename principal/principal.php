@@ -36,7 +36,7 @@ $movies = $movieController->get();
                     <a href="../principal/principal.php">Inicio</a>
                     <a href="#">Contacto</a>
                     
-                    <a href="../dashboard/dashboard.php">Dashboard</a>
+                    <a href="../app/salir.php">Salir</a>
                     
                 </nav>
             </div>
