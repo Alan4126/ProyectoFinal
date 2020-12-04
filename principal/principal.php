@@ -7,6 +7,10 @@ $movieController = new MovieController();
 
 $movies = $movieController->get();
 
+if(isset($_SESSION)==false || isset($_SESSION['id'])==false){
+    header("Location:../");
+}
+
 ?>
 
 
@@ -34,7 +38,7 @@ $movies = $movieController->get();
                 </div>
                 <nav>
                     <a href="../principal/principal.php">Inicio</a>
-                    <a href="#">Contacto</a>
+                    
                     
                     <a href="../app/salir.php">Salir</a>
                     

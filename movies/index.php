@@ -8,10 +8,9 @@
 	$categories = $categoryController->get();
     $movies = $movieController->get();
     
-    /*if(isset($_SESSION)==false || isset($_SESSION['id'])==false){
+    if(isset($_SESSION)==false || isset($_SESSION['id'])==false){
         header("Location:../");
-    }*/
-
+    }
 	// if (!isset($_SESSION['id']) || $_SESSION['role'] != "admin") {
 	// 	header("Location:../");
 	// }

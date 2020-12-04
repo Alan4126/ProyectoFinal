@@ -1,3 +1,12 @@
+<?php 
+
+if(isset($_SESSION)==false || isset($_SESSION['id'])==false){
+    header("Location:../");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -27,6 +27,7 @@ $categorys =  $movieController->getCategory($_GET['id']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu</title>
     <link rel="stylesheet" href="../css/estilosPeliculas.css?v=0.0.8">
+    <link rel="stylesheet" href="../css/estilosIndex.css?v=0.0.8">  
     
 </head>
 <body>
@@ -43,7 +44,7 @@ $categorys =  $movieController->getCategory($_GET['id']);
                 </div>
                 <nav class="nav">
                     <a href="../principal/principal.php">Inicio</a>
-                    <a href="#">Contacto</a>
+                    <a href="../app/salir.php">Salir</a>
                     
                 </nav>
             </div>
@@ -160,6 +161,37 @@ $categorys =  $movieController->getCategory($_GET['id']);
 
 
         </div>
+        <br><br><br><br><br>                                    
+        <!--===============================
+            INICIO DEL FOOTER DE LA PAGINA
+        ===================================-->
+        <footer>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="index.php">© copyright by Jesus Alan Hernandez Rodarte </a>
+                    
+                </div>
+                <nav >
+                    <a href="#">
+                        <img src="../img/facebook.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="../img/twit.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="../img/instagram.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="../img/google.png" alt="">
+                    </a>
+                    
+                    
+                </nav>
+            </div>
+        </footer>
+        <!--===============================
+            FIN DEL FOOTER DE LA PAGINA
+        ===================================-->
 
         
     
