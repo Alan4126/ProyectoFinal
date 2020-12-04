@@ -97,9 +97,15 @@ class AuthController{
 						$_SESSION['id'] = $user['id'];
 						$_SESSION['name'] = $user['name'];
 						$_SESSION['email'] = $user['email'];  
+                        $_SESSION['role'] = $user['role'];
 
+                        if ($_SESSION['role']=="administrador") {
+                            header("Location:../dashboard/dashboard.php" );
+                        }else{
+                            header("Location:../principal/principal.php" );
+                        }
 
-						header("Location:../principal/principal.php" );
+						
 					}else{
 						$_SESSION['error'] = 'verifique los datos envíados'; 
 						header("Location:". $_SERVER['HTTP_REFERER'] );
@@ -122,11 +128,7 @@ class AuthController{
 
     }
 
-    public function logout(){
 
-        
-
-    }
 
 
 
