@@ -1,8 +1,6 @@
 <?php 
 
-if(isset($_SESSION)==false || isset($_SESSION['id'])==false){
-    header("Location:../");
-}
+
 
 ?>
 
